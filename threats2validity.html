@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ACAV Issues</title>
+    <title>ACAV2023 Issues</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -52,22 +52,38 @@
 
       <div class="row">
 
-        <div class="col-md-4 portfolio-item">
-          <a href="#project-link"><img class="img-responsive" src="http://placehold.it/700x400"></a>
-          <h3><a href="#project-link">Project Name</a></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        <div class="col-md-6 portfolio-item">
+          <video id="Limitation-1" width="560" height="267" controls muted>
+            <source src="video/Limitation_1.mp4" type="video/mp4">
+          </video>
+          <h3><a href="video/Limitation_1.mp4">Example 1.</a></h3>
+          <script>
+            var vid4_1 = document.getElementById("Limitation-1");
+            function getCurTime4_1() { 
+              alert(vid4_1.currentTime);
+            } 
+            function setCurTime4_1(time) {              
+              vid4_1.currentTime=time;
+            } 
+          </script> 
+          <p>The EV is hit by the NPC 5 from behind at <a href="#" onclick="setCurTime4_1(15)">15s</a>.</p>
         </div>
 
-        <div class="col-md-4 portfolio-item">
-          <a href="#project-link"><img class="img-responsive" src="http://placehold.it/700x400"></a>
-          <h3><a href="#project-link">Project Name</a></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-
-        <div class="col-md-4 portfolio-item">
-          <a href="#project-link"><img class="img-responsive" src="http://placehold.it/700x400"></a>
-          <h3><a href="#project-link">Project Name</a></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        <div class="col-md-6 portfolio-item">
+          <video id="Limitation-2" width="560" height="267" controls muted>
+            <source src="video/Limitation_2.mp4" type="video/mp4">
+          </video>
+          <h3><a href="video/Limitation_2.mp4">Example 2.</a></h3>
+          <script>
+            var vid4_2 = document.getElementById("Limitation-2");
+            function getCurTime4_2() { 
+              alert(vid4_2.currentTime);
+            } 
+            function setCurTime4_2(time) {              
+              vid4_2.currentTime=time;
+            } 
+          </script> 
+          <p>The EV is hit by the NPC 4 from behind at <a href="#" onclick="setCurTime4_2(14.8)">15s</a>.</p>
         </div>
 
       </div>

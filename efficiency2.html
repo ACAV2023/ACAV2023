@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ACAV Issues</title>
+    <title>ACAV2023 Issues</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -51,24 +51,102 @@
       </div>
 
       <div class="row">
-
-        <div class="col-md-4 portfolio-item">
-          <a href="#project-link"><img class="img-responsive" src="http://placehold.it/700x400"></a>
-          <h3><a href="#project-link">Project Name</a></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        <div class="col-md-6 portfolio-item">
+          <video id="Merging-1" width="560" height="267" controls muted>
+            <source src="video/Merging_1.mp4" type="video/mp4">
+          </video>
+          <h3><a href="video/Merging_1.mp4">Merging Accident 1.</a></h3>
+          <script>
+            var vid2_1 = document.getElementById("Merging-1");
+            function getCurTime2_1() { 
+              alert(vid2_1.currentTime);
+            } 
+            function setCurTime2_1(time) {              
+              vid2_1.currentTime=time;
+            } 
+          </script> 
+          <!--<p>In this situation, the traffic light turns from green to yellow at <a href="#" onclick="setCurTime2_1(10.3)">10S</a> and there is enough distance for the vehicle to stop. However, the ego vehicle fails to stop before the stop line and decide to rush the yellow light and cause collision with the NPC vehicle ahead at <a href="#" onclick="setCurTime2_1(13.5)">13S</a>.
+          The behavior of rush yellow light causes accidents since there is a speed up when the vehicle is close to the stop line and the ego vehicle violates the yellow light related part of Article38.</p>-->
         </div>
-
-        <div class="col-md-4 portfolio-item">
-          <a href="#project-link"><img class="img-responsive" src="http://placehold.it/700x400"></a>
-          <h3><a href="#project-link">Project Name</a></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        <div class="col-md-6 portfolio-item">
+          <table class="table table-hover">
+            <thead>
+              <tr><th>Time</th><th>EV's Causal Events</th><th>Obs states</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><a href="#" onclick="setCurTime2_1(11.2)">11.2s</a></td>
+                <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
+                <td>--</td>
+              </tr>
+              <tr><td><a href="#" onclick="setCurTime2_1(11.6)">11.6s</a></td>
+                <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
+                <td>--</td>
+              </tr>
+              <tr class="warning"><td><a href="#" onclick="setCurTime2_1(12)">12s</a></td>
+                <td><b>In Planning Module and Prediction Module:</b><br>Wrong identification of drivable area, caused by wrong trajectory prediction<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
+                <td><b>For NPC 2: </b><br>Wrong priority/trajectory prediction <br>Improper "none" decision <br><b>For NPC 4: </b><br>Improper "overtake" decision </td>
+              </tr>
+              <tr class="warning"><td><a href="#" onclick="setCurTime2_1(13.6)">13.6s</a></td>
+                <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
+                <td><b>For NPC 2: </b><br>Wrong priority prediction<br>Wrong trajectory prediction <br>Improper "none" decision </td>
+              </tr>
+              <tr class="danger"><td><a href="#" onclick="setCurTime2_1(15.5)">15.5s</a></td>
+                <td><b>Accident!</b></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
 
-        <div class="col-md-4 portfolio-item">
-          <a href="#project-link"><img class="img-responsive" src="http://placehold.it/700x400"></a>
-          <h3><a href="#project-link">Project Name</a></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+      <div class="row">
+        <div class="col-md-6 portfolio-item">
+          <video id="Merging-2" width="560" height="267" controls muted>
+            <source src="video/Merging_2.mp4" type="video/mp4">
+          </video>
+          <h3><a href="video/Merging_2.mp4">Merging Accident 2.</a></h3>
+          <script>
+            var vid2_2 = document.getElementById("Merging-2");
+            function getCurTime2_2() { 
+              alert(vid2_2.currentTime);
+            } 
+            function setCurTime2_2(time) {              
+              vid2_2.currentTime=time;
+            } 
+          </script> 
+          <!--<p>In this situation, the traffic light turns from green to yellow at <a href="#" onclick="setCurTime2_2(10.3)">10S</a> and there is enough distance for the vehicle to stop. However, the ego vehicle fails to stop before the stop line and decide to rush the yellow light and cause collision with the NPC vehicle ahead at <a href="#" onclick="setCurTime2_2(13.5)">13S</a>.
+          The behavior of rush yellow light causes accidents since there is a speed up when the vehicle is close to the stop line and the ego vehicle violates the yellow light related part of Article38.</p>-->
         </div>
+        <div class="col-md-6 portfolio-item">
+          <table class="table table-hover">
+            <thead>
+              <tr><th>Time</th><th>EV's Causal Events</th><th>Obs states</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><a href="#" onclick="setCurTime2_2(10.9)">10.9s</a></td>
+                <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
+                <td>--</td>
+              </tr>
+              <tr><td><a href="#" onclick="setCurTime2_2(11.0)">11s</a></td>
+                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>For NPC 2: </b><br>Wrong trajectory prediction</td>
+              </tr>
+              <tr class="warning"><td><a href="#" onclick="setCurTime2_2(12.4)">12.4s</a></td>
+                <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
+                <td><b>For NPC 2: </b><br>Wrong trajectory prediction</td>
+              </tr>
+              <tr class="warning"><td><a href="#" onclick="setCurTime2_2(13.6)">13.6s</a></td>
+                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>For NPC 2: </b><br>Wrong priority prediction<br>Wrong trajectory prediction</td>
+              </tr>
+              <tr class="danger"><td><a href="#" onclick="setCurTime2_2(15.7)">15.7s</a></td>
+                <td><b>Accident!</b></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
       </div>
 
@@ -81,7 +159,8 @@
             <li><a href="index.html">&laquo;</a></li>
             <li><a href="index.html">1</a></li>
             <li class="active"><a href="efficiency2.html">2</a></li>
-            <li><a href="efficiency2.html">&raquo;</a></li>
+            <li><a href="efficiency3.html">3</a></li>
+            <li><a href="efficiency3.html">&raquo;</a></li>
           </ul>        
         </div>
 

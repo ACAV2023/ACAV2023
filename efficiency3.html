@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ACAV2023 Issues</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS for the '3 Col Portfolio' Template -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://acav2023.github.io">ACAV2023</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Efficiency Issues</a></li>
+            <li><a href="threats2validity.html">Threats to Validity</a></li>
+            <li><a href="sourcecode.html">Source Code & Supplementary Materials</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-12">
+          <h1 class="page-header">ACAV <small>Efficiency Issues</small></h1>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 portfolio-item">
+          <video id="Tailgating-1" width="560" height="267" controls muted>
+            <source src="video/Tailgating_1.mp4" type="video/mp4">
+          </video>
+          <h3><a href="video/Tailgating_1.mp4">Tailgating Accident 1.</a></h3>
+          <script>
+            var vid3_1 = document.getElementById("Tailgating-1");
+            function getCurTime3_1() { 
+              alert(vid3_1.currentTime);
+            } 
+            function setCurTime3_1(time) {              
+              vid3_1.currentTime=time;
+            } 
+          </script> 
+          <!--<p>In this situation, the traffic light turns from green to yellow at <a href="#" onclick="setCurTime3_1(10.3)">10S</a> and there is enough distance for the vehicle to stop. However, the ego vehicle fails to stop before the stop line and decide to rush the yellow light and cause collision with the NPC vehicle ahead at <a href="#" onclick="setCurTime3_1(13.5)">13S</a>.
+          The behavior of rush yellow light causes accidents since there is a speed up when the vehicle is close to the stop line and the ego vehicle violates the yellow light related part of Article38.</p>-->
+        </div>
+        <div class="col-md-6 portfolio-item">
+          <table class="table table-hover">
+            <thead>
+              <tr><th>Time</th><th>EV's Causal Events</th><th>Obs states</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><a href="#" onclick="setCurTime3_1(28)">28s</a></td>
+                <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
+                <td>--</td>
+              </tr>
+              <tr><td><a href="#" onclick="setCurTime3_1(28.4)">28.4s</a></td>
+                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>For NPC 2: </b><br>Wrong trajectory prediction</td>
+              </tr>
+              <tr><td><a href="#" onclick="setCurTime3_1(29.3)">29.3s</a></td>
+                <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>For NPC 2: </b><br>Wrong priority/trajectory prediction</td>
+              </tr>
+              <tr><td><a href="#" onclick="setCurTime3_1(29.7)">29.7s</a></td>
+                <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
+                <td><b>For NPC 2: </b><br>Wrong priority/trajectory prediction</td>
+              </tr>
+              <tr class="warning"><td><a href="#" onclick="setCurTime3_1(30.4)">30.4s</a></td>
+                <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
+                <td>--</td>
+              </tr>
+              <tr class="danger"><td><a href="#" onclick="setCurTime3_1(31.3)">31.3s</a></td>
+                <td><b>Accident!</b></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 portfolio-item">
+          <video id="Tailgating-2" width="560" height="267" controls muted>
+            <source src="video/Tailgating_2.mp4" type="video/mp4">
+          </video>
+          <h3><a href="video/Tailgating_2.mp4">Tailgating Accident 2.</a></h3>
+          <script>
+            var vid3_2 = document.getElementById("Tailgating-2");
+            function getCurTime3_2() { 
+              alert(vid3_2.currentTime);
+            } 
+            function setCurTime3_2(time) {              
+              vid3_2.currentTime=time;
+            } 
+          </script> 
+          <!--<p>In this situation, the traffic light turns from green to yellow at <a href="#" onclick="setCurTime3_2(10.3)">10S</a> and there is enough distance for the vehicle to stop. However, the ego vehicle fails to stop before the stop line and decide to rush the yellow light and cause collision with the NPC vehicle ahead at <a href="#" onclick="setCurTime3_2(13.5)">13S</a>.
+          The behavior of rush yellow light causes accidents since there is a speed up when the vehicle is close to the stop line and the ego vehicle violates the yellow light related part of Article38.</p>-->
+        </div>
+        <div class="col-md-6 portfolio-item">
+          <table class="table table-hover">
+            <thead>
+              <tr><th>Time</th><th>EV's Causal Events</th><th>Obs states</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><a href="#" onclick="setCurTime3_2(46.1)">46.1s</a></td>
+                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>For NPC 4: </b><br>Wrong trajectory prediction<br>Improper "follow" decision (too close)</td>
+              </tr>
+              <tr><td><a href="#" onclick="setCurTime3_2(48.6)">48.6s</a></td>
+                <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
+                <td><b>For NPC 4: </b><br>Wrong trajectory prediction</td>
+              </tr>
+              <tr class="warning"><td><a href="#" onclick="setCurTime3_2(49)">49s</a></td>
+                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>For NPC 4: </b><br>Wrong trajectory prediction<br>Improper "follow" decision (too close)</td>
+              </tr>
+              <tr class="warning"><td><a href="#" onclick="setCurTime3_2(50.1)">50.1s</a></td>
+                <td><b>In Planning Module and Prediction Module:</b><br>Wrong identification of drivable area, caused by wrong trajectory prediction<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
+                <td><b>For NPC 4: </b><br>Wrong trajectory prediction</td>
+              </tr>
+              <tr class="danger"><td><a href="#" onclick="setCurTime3_2(51)">51s</a></td>
+                <td><b>Accident!</b></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row text-center">
+        
+        <!--<div class="col-lg-12">
+          <ul class="pagination">
+            <li><a href="index.html">&laquo;</a></li>
+            <li><a href="index.html">1</a></li>
+            <li class="active"><a href="efficiency2.html">2</a></li>
+            <li><a href="efficiency3.html">3</a></li>
+            <li><a href="efficiency3.html">&raquo;</a></li>
+          </ul>        
+        </div>-->
+        <div class="col-lg-12">
+          <ul class="pagination">
+            <li><a href="efficiency2.html">&laquo;</a></li>
+            <li><a href="index.html">1</a></li>
+            <li><a href="efficiency2.html">2</a></li>
+            <li class="active"><a href="efficiency3.html">3</a></li>
+            <li><a href="efficiency3.html">&raquo;</a></li>
+          </ul>        
+        </div>
+
+      </div>
+
+    </div><!-- /.container -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+      var dt = new Date();
+      document.getElementById('getCurrentDate').innerHTML = dt.getFullYear();
+    </script>
+  </body>
+
+</html>
