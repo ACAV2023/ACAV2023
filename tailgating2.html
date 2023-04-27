@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ACAV2023</title>
+    <title>ACAV2023 Issues</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -52,13 +52,13 @@
 
       <div class="row">
         <div class="col-md-6 portfolio-item">
-          <h3>Intersection Accident 1</a></h3>
-          <h4><a href="video/Intersection_1_reduced.mp4">Reduced Recording.</a></h4>
-          <video id="Intersection-1r" width="560" height="267" controls muted>
-            <source src="video/Intersection_1_reduced.mp4" type="video/mp4">
+          <h3>Tailgating Accident 2</a></h3>
+          <h4><a href="video/Tailgating_2_reduced.mp4">Reduced Recording.</a></h4>
+          <video id="Tailgating_2r" width="560" height="267" controls muted>
+            <source src="video/Tailgating_2_reduced.mp4" type="video/mp4">
           </video>
           <script>
-            var vid1_1r = document.getElementById("Intersection-1r");
+            var vid1_1r = document.getElementById("Tailgating_2r");
             function getCurTime1() { 
               alert(vid1_1r.currentTime);
             } 
@@ -66,12 +66,12 @@
               vid1_1r.currentTime=time;
             } 
           </script> 
-          <h4><a href="video/Intersection_1.mp4">Original Recording.</a></h4>
-          <video id="Intersection-1" width="560" height="267" controls muted>
-            <source src="video/Intersection_1.mp4" type="video/mp4">
+          <h4><a href="video/Tailgating_2.mp4">Original Recording.</a></h4>
+          <video id="Tailgating_2" width="560" height="267" controls muted>
+            <source src="video/Tailgating_2.mp4" type="video/mp4">
           </video>
           <script>
-            var vid1_1 = document.getElementById("Intersection-1");
+            var vid1_1 = document.getElementById("Tailgating_2");
             function getCurTime2() { 
               alert(vid1_1.currentTime);
             } 
@@ -85,38 +85,37 @@
           <h3>Causality Analysis by ACAV</a></h3>
           <table class="table table-hover">
             <thead>
-              <tr><th>Time</th><th>EV's Causal Events</th><th>Obs States</th></tr>
+              <tr><th>Time</th><th>EV's Causal Events</th><th>Obs states</th></tr>
             </thead>
             <tbody>
-              <tr><td><a href="#" onclick="setCurTime1(0)">0s</a></td>
-                <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
-                <td>--</td>
+              <tr><td><a href="#" onclick="setCurTime1(0.1)">0s</a></td>
+                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>For NPC 4: </b><br>Wrong trajectory prediction<br>Improper "follow" decision (too close)</td>
               </tr>
               <tr><td><a href="#" onclick="setCurTime1(2.6)">2.6s</a></td>
-                <td><b>In Planning Module:</b><br>EV reuses the previous planning, which sometimes could be improper </td>
-                <td>--</td>
+                <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
+                <td><b>For NPC 4: </b><br>Wrong trajectory prediction</td>
               </tr>
-              <tr class="warning"><td><a href="#" onclick="setCurTime1(2.9)">2.9s</a></td>
+              <tr class="warning"><td><a href="#" onclick="setCurTime1(3)">3s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
-                <td><b>For NPC 3: </b><br>Wrong trajectory prediction <br>Improper "follow" decision (too close)</td>
+                <td><b>For NPC 4: </b><br>Wrong trajectory prediction<br>Improper "follow" decision (too close)</td>
               </tr>
-              <tr class="warning"><td><a href="#" onclick="setCurTime1(5.7)">5.7s</a></td>
-                <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
-                <td><b>For NPC 3: </b><br>Wrong priority prediction<br>Wrong trajectory prediction <br>Improper "follow" decision (too close)</td>
+              <tr class="warning"><td><a href="#" onclick="setCurTime1(4.1)">4.1s</a></td>
+                <td><b>In Planning Module and Prediction Module:</b><br>Wrong identification of drivable area, caused by wrong trajectory prediction<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
+                <td><b>For NPC 4: </b><br>Wrong trajectory prediction</td>
               </tr>
-              <tr class="danger"><td><a href="#" onclick="setCurTime1(6.2)">6.2s</a></td>
+              <tr class="danger"><td><a href="#" onclick="setCurTime1(5.0)">5s</a></td>
                 <td><b>Accident!</b></td>
                 <td></td>
               </tr>
             </tbody>
           </table>
-          <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime2(7.8)">7.8s</a> 
-            and ends at <a href="#" onclick="setCurTime2(14)">14s</a> in the original recording.<br>
-            <a href="report/Intersection-1_report.txt">Check the original report.</a>
+          <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime2(46.1)">46.1s</a> 
+            and ends at <a href="#" onclick="setCurTime2(51)">51s</a> in the original recording.<br>
+            <a href="report/Tailgating_2_report.txt">Check the original report.</a>
           </p>
         </div>
       </div>
-    </div>
 
       <hr>
 
@@ -124,15 +123,15 @@
         
         <div class="col-lg-12">
           <ul class="pagination">
-            <li><a href="index.html">&laquo;</a></li>
-            <li class="active"><a href="index.html">1</a></li>
-            <li><a href="intersection2.html">2</a></li>
+            <li><a href="tailgating1.html">&laquo;</a></li>
+            <li><a href="index.html">1</a></li>
+            <li><a href="Intersection2.html">2</a></li>
             <li><a href="merging1.html">3</a></li>
             <li><a href="merging2.html">4</a></li>
             <li><a href="tailgating1.html">5</a></li>
-            <li><a href="tailgating2.html">6</a></li>
-            <li><a href="intersection2.html">&raquo;</a></li>
-          </ul>        
+            <li class="active"><a href="tailgating2.html">6</a></li>
+            <li><a href="tailgating2.html">&raquo;</a></li>
+          </ul>
         </div>
 
       </div>
