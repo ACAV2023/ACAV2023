@@ -58,12 +58,12 @@
             <source src="video/Merging_2_reduced.mp4" type="video/mp4">
           </video>
           <script>
-            var vid1_1r = document.getElementById("Merging-2r");
-            function getCurTime1() { 
-              alert(vid1_1r.currentTime);
+            var vid4r = document.getElementById("Merging-2r");
+            function getCurTime4_1() { 
+              alert(vid4r.currentTime);
             } 
-            function setCurTime1(time) {              
-              vid1_1r.currentTime=time;
+            function setCurTime4_1(time) {              
+              vid4r.currentTime=time;
             } 
           </script> 
           <h4><a href="video/Merging_2.mp4">Original Recording.</a></h4>
@@ -71,12 +71,12 @@
             <source src="video/Merging_2.mp4" type="video/mp4">
           </video>
           <script>
-            var vid1_1 = document.getElementById("Merging-2");
-            function getCurTime2() { 
-              alert(vid1_1.currentTime);
+            var vid4 = document.getElementById("Merging-2");
+            function getCurTime4_2() { 
+              alert(vid4.currentTime);
             } 
-            function setCurTime2(time) {              
-              vid1_1.currentTime=time;
+            function setCurTime4_2(time) {              
+              vid4.currentTime=time;
             } 
           </script> 
         </div>
@@ -88,30 +88,30 @@
               <tr><th>Time</th><th>EV's Causal Events</th><th>Obs states</th></tr>
             </thead>
             <tbody>
-              <tr><td><a href="#" onclick="setCurTime1(0)">0s</a></td>
+              <tr><td><a href="#" onclick="setCurTime4_1(0)">0s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
                 <td>--</td>
               </tr>
-              <tr><td><a href="#" onclick="setCurTime1(0.3)">0.3s</a></td>
+              <tr><td><a href="#" onclick="setCurTime4_1(0.3)">0.3s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
                 <td><b>For NPC 2: </b><br>Wrong trajectory prediction</td>
               </tr>
-              <tr class="warning"><td><a href="#" onclick="setCurTime1(1.7)">1.7s</a></td>
+              <tr class="warning"><td><a href="#" onclick="setCurTime4_1(1.7)">1.7s</a></td>
                 <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
                 <td><b>For NPC 2: </b><br>Wrong trajectory prediction</td>
               </tr>
-              <tr class="warning"><td><a href="#" onclick="setCurTime1(2.9)">2.9s</a></td>
+              <tr class="warning"><td><a href="#" onclick="setCurTime4_1(2.9)">2.9s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
                 <td><b>For NPC 2: </b><br>Wrong priority prediction<br>Wrong trajectory prediction</td>
               </tr>
-              <tr class="danger"><td><a href="#" onclick="setCurTime1(5.0)">5s</a></td>
+              <tr class="danger"><td><a href="#" onclick="setCurTime4_1(5.0)">5s</a></td>
                 <td><b>Accident!</b></td>
                 <td></td>
               </tr>
             </tbody>
           </table>
-          <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime2(10.9)">10.9s</a> 
-            and ends at <a href="#" onclick="setCurTime2(15.7)">15.7s</a> in the original recording.<br>
+          <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime4_2(10.9)">10.9s</a> 
+            and ends at <a href="#" onclick="setCurTime4_2(15.7)">15.7s</a> in the original recording.<br>
             <a href="report/Merging-1_report.txt">Check the original report.</a>
           </p>
         </div>

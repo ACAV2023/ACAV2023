@@ -58,12 +58,12 @@
             <source src="video/Merging_1_reduced.mp4" type="video/mp4">
           </video>
           <script>
-            var vid1_1r = document.getElementById("Merging-1r");
-            function getCurTime1() { 
-              alert(vid1_1r.currentTime);
+            var vid3r = document.getElementById("Merging-1r");
+            function getCurTime3_1() { 
+              alert(vid3r.currentTime);
             } 
-            function setCurTime1(time) {              
-              vid1_1r.currentTime=time;
+            function setCurTime3_1(time) {              
+              vid3r.currentTime=time;
             } 
           </script> 
           <h4><a href="video/Merging_1.mp4">Original Recording.</a></h4>
@@ -71,12 +71,12 @@
             <source src="video/Merging_1.mp4" type="video/mp4">
           </video>
           <script>
-            var vid1_1 = document.getElementById("Merging-1");
-            function getCurTime2() { 
-              alert(vid1_1.currentTime);
+            var vid3 = document.getElementById("Merging-1");
+            function getCurTime3_2() { 
+              alert(vid3.currentTime);
             } 
-            function setCurTime2(time) {              
-              vid1_1.currentTime=time;
+            function setCurTime3_2(time) {              
+              vid3.currentTime=time;
             } 
           </script> 
         </div>
@@ -88,30 +88,30 @@
               <tr><th>Time</th><th>EV's Causal Events</th><th>Obs states</th></tr>
             </thead>
             <tbody>
-              <tr><td><a href="#" onclick="setCurTime1(0)">0s</a></td>
+              <tr><td><a href="#" onclick="setCurTime3_1(0)">0s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
                 <td>--</td>
               </tr>
-              <tr><td><a href="#" onclick="setCurTime1(0.4)">0.4s</a></td>
+              <tr><td><a href="#" onclick="setCurTime3_1(0.4)">0.4s</a></td>
                 <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
                 <td>--</td>
               </tr>
-              <tr class="warning"><td><a href="#" onclick="setCurTime1(0.8)">0.8s</a></td>
+              <tr class="warning"><td><a href="#" onclick="setCurTime3_1(0.8)">0.8s</a></td>
                 <td><b>In Planning Module and Prediction Module:</b><br>Wrong identification of drivable area, caused by wrong trajectory prediction<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
                 <td><b>For NPC 2: </b><br>Wrong priority/trajectory prediction <br>Improper "none" decision <br><b>For NPC 4: </b><br>Improper "overtake" decision </td>
               </tr>
-              <tr class="warning"><td><a href="#" onclick="setCurTime1(2.6)">2.6s</a></td>
+              <tr class="warning"><td><a href="#" onclick="setCurTime3_1(2.6)">2.6s</a></td>
                 <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
                 <td><b>For NPC 2: </b><br>Wrong priority prediction<br>Wrong trajectory prediction <br>Improper "none" decision </td>
               </tr>
-              <tr class="danger"><td><a href="#" onclick="setCurTime1(4.3)">4.3s</a></td>
+              <tr class="danger"><td><a href="#" onclick="setCurTime3_1(4.3)">4.3s</a></td>
                 <td><b>Accident!</b></td>
                 <td></td>
               </tr>
             </tbody>
           </table>
-          <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime2(11.2)">11.2s</a> 
-            and ends at <a href="#" onclick="setCurTime2(15.5)">15.5s</a> in the original recording.<br>
+          <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime3_2(11.2)">11.2s</a> 
+            and ends at <a href="#" onclick="setCurTime3_2(15.5)">15.5s</a> in the original recording.<br>
             <a href="report/Merging-1_report.txt">Check the original report.</a>
           </p>
         </div>

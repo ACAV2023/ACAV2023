@@ -58,12 +58,12 @@
             <source src="video/Intersection_1_reduced.mp4" type="video/mp4">
           </video>
           <script>
-            var vid1_1r = document.getElementById("Intersection-1r");
-            function getCurTime1() { 
-              alert(vid1_1r.currentTime);
+            var vid1r = document.getElementById("Intersection-1r");
+            function getCurTime1_1() { 
+              alert(vid1r.currentTime);
             } 
-            function setCurTime1(time) {              
-              vid1_1r.currentTime=time;
+            function setCurTime1_1(time) {              
+              vid1r.currentTime=time;
             } 
           </script> 
           <h4><a href="video/Intersection_1.mp4">Original Recording.</a></h4>
@@ -71,12 +71,12 @@
             <source src="video/Intersection_1.mp4" type="video/mp4">
           </video>
           <script>
-            var vid1_1 = document.getElementById("Intersection-1");
-            function getCurTime2() { 
-              alert(vid1_1.currentTime);
+            var vid1 = document.getElementById("Intersection-1");
+            function getCurTime1_2() { 
+              alert(vid1.currentTime);
             } 
-            function setCurTime2(time) {              
-              vid1_1.currentTime=time;
+            function setCurTime1_2(time) {              
+              vid1.currentTime=time;
             } 
           </script> 
         </div>
@@ -88,30 +88,30 @@
               <tr><th>Time</th><th>EV's Causal Events</th><th>Obs States</th></tr>
             </thead>
             <tbody>
-              <tr><td><a href="#" onclick="setCurTime1(0)">0s</a></td>
+              <tr><td><a href="#" onclick="setCurTime1_1(0)">0s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
                 <td>--</td>
               </tr>
-              <tr><td><a href="#" onclick="setCurTime1(2.6)">2.6s</a></td>
+              <tr><td><a href="#" onclick="setCurTime1_1(2.6)">2.6s</a></td>
                 <td><b>In Planning Module:</b><br>EV reuses the previous planning, which sometimes could be improper </td>
                 <td>--</td>
               </tr>
-              <tr class="warning"><td><a href="#" onclick="setCurTime1(2.9)">2.9s</a></td>
+              <tr class="warning"><td><a href="#" onclick="setCurTime1_1(2.9)">2.9s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
                 <td><b>For NPC 3: </b><br>Wrong trajectory prediction <br>Improper "follow" decision (too close)</td>
               </tr>
-              <tr class="warning"><td><a href="#" onclick="setCurTime1(5.7)">5.7s</a></td>
+              <tr class="warning"><td><a href="#" onclick="setCurTime1_1(5.7)">5.7s</a></td>
                 <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
                 <td><b>For NPC 3: </b><br>Wrong priority prediction<br>Wrong trajectory prediction <br>Improper "follow" decision (too close)</td>
               </tr>
-              <tr class="danger"><td><a href="#" onclick="setCurTime1(6.2)">6.2s</a></td>
+              <tr class="danger"><td><a href="#" onclick="setCurTime1_1(6.2)">6.2s</a></td>
                 <td><b>Accident!</b></td>
                 <td></td>
               </tr>
             </tbody>
           </table>
-          <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime2(7.8)">7.8s</a> 
-            and ends at <a href="#" onclick="setCurTime2(14)">14s</a> in the original recording.<br>
+          <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime1_2(7.8)">7.8s</a> 
+            and ends at <a href="#" onclick="setCurTime1_2(14)">14s</a> in the original recording.<br>
             <a href="report/Intersection-1_report.txt">Check the original report.</a>
           </p>
         </div>

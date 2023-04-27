@@ -58,12 +58,12 @@
             <source src="video/Intersection_2_reduced.mp4" type="video/mp4">
           </video>
           <script>
-            var vid1_1r = document.getElementById("Intersection-2r");
-            function getCurTime1() { 
-              alert(vid1_1r.currentTime);
+            var vid2r = document.getElementById("Intersection-2r");
+            function getCurTime2_1() { 
+              alert(vid2r.currentTime);
             } 
-            function setCurTime1(time) {              
-              vid1_1r.currentTime=time;
+            function setCurTime2_1(time) {              
+              vid2r.currentTime=time;
             } 
           </script> 
           <h4><a href="video/Intersection_2.mp4">Original Recording.</a></h4>
@@ -71,12 +71,12 @@
             <source src="video/Intersection_2.mp4" type="video/mp4">
           </video>
           <script>
-            var vid1_1 = document.getElementById("Intersection-2");
-            function getCurTime2() { 
-              alert(vid1_1.currentTime);
+            var vid2 = document.getElementById("Intersection-2");
+            function getCurTime2_2() { 
+              alert(vid2.currentTime);
             } 
-            function setCurTime2(time) {              
-              vid1_1.currentTime=time;
+            function setCurTime2_2(time) {              
+              vid2.currentTime=time;
             } 
           </script> 
         </div>
@@ -88,30 +88,30 @@
               <tr><th>Time</th><th>EV's Causal Events</th><th>Obs States</th></tr>
             </thead>
             <tbody>
-              <tr><td><a href="#" onclick="setCurTime1(0)">0s</a></td>
+              <tr><td><a href="#" onclick="setCurTime2_1(0)">0s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
                 <td>--</td>
               </tr>
-              <tr><td><a href="#" onclick="setCurTime1(0.9)">0.9s</a></td>
+              <tr><td><a href="#" onclick="setCurTime2_1(0.9)">0.9s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
                 <td>--</td>
               </tr>
-              <tr><td><a href="#" onclick="setCurTime1(2.3)">2.3s</a></td>
+              <tr><td><a href="#" onclick="setCurTime2_1(2.3)">2.3s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
                 <td>--</td>
               </tr>
-              <tr class="warning"><td><a href="#" onclick="setCurTime1(3.3)">3.3s</a></td>
+              <tr class="warning"><td><a href="#" onclick="setCurTime2_1(3.3)">3.3s</a></td>
                 <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
                 <td>--</td>
               </tr>
-              <tr class="danger"><td><a href="#" onclick="setCurTime1(4.3)">4.3s</a></td>
+              <tr class="danger"><td><a href="#" onclick="setCurTime2_1(4.3)">4.3s</a></td>
                 <td><b>Accident!</b></td>
                 <td></td>
               </tr>
             </tbody>
           </table>
-          <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime2(8.15)">8.2s</a> 
-            and ends at <a href="#" onclick="setCurTime2(12)">12s</a> in the original recording.<br>
+          <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime2_2(8.15)">8.2s</a> 
+            and ends at <a href="#" onclick="setCurTime2_2(12)">12s</a> in the original recording.<br>
             <a href="report/Intersection-2_report.txt">Check the original report.</a>
           </p>
         </div>
