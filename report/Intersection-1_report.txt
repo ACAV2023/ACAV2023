@@ -1,0 +1,23 @@
+Frame #0-32:    
+    No <Planning> Faults Discovered: EV keeps safe distance from NPCs
+
+Frame #33-36:    
+    In <Planning> Module: EV reuses the previous planning, which sometimes could be improper
+
+Frame #37-72:    (Safety-critical!)
+    No <Planning> Faults Discovered: Collision-free long-term speed planning
+        For NPC "3": Wrong trajectory prediction
+        For NPC "3": Improper "follow" decision
+            Unsafe, EV is approaching the NPC now
+    In <Control> Module: EV is skidding sometimes
+
+Frame #73-77:    (Safety-critical!)
+    In <Planning> Module: Wrong speed planning, although identifying drivable area correctly
+        For NPC "3": Wrong priority prediction
+        For NPC "3": Wrong trajectory prediction
+        For NPC "3": Improper "none" decision
+            Unsafe, EV is approaching the NPC now
+    In <Control> Module: EV is skidding sometimes
+
+Frame #78:
+    Accident!

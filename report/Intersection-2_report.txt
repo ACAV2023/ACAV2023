@@ -1,0 +1,16 @@
+Frame #0-5:    
+    No <Planning> Faults Discovered: EV keeps safe distance from NPCs
+
+Frame #6-21:    
+    No <Planning> Faults Discovered: Collision-free long-term speed planning
+    In <Control> Module: EV is skidding sometimes
+
+Frame #22-34:    
+    No <Planning> Faults Discovered: EV keeps safe distance from NPCs
+
+Frame #35-47:    (Safety-critical!)
+    In <Planning> Module: Wrong speed planning, although identifying drivable area correctly
+    In <Control> Module: EV is skidding sometimes
+
+Frame #48:
+    Accident!
