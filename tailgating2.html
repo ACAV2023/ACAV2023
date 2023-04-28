@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ACAV2023 Issues</title>
+    <title>ACAV2023</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -88,7 +88,7 @@
               <tr><th>Time</th><th>EV's Causal Events</th><th>Obs states</th></tr>
             </thead>
             <tbody>
-              <tr><td><a href="#" onclick="setCurTime6_1(0.1)">0s</a></td>
+              <tr class="warning"><td><a href="#" onclick="setCurTime6_1(0.1)">0s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
                 <td><b>For NPC 4: </b><br>Wrong trajectory prediction<br>Improper "follow" decision (too close)</td>
               </tr>
@@ -100,11 +100,11 @@
                 <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
                 <td><b>For NPC 4: </b><br>Wrong trajectory prediction<br>Improper "follow" decision (too close)</td>
               </tr>
-              <tr class="warning"><td><a href="#" onclick="setCurTime6_1(4.1)">4.1s</a></td>
+              <tr class="danger"><td><a href="#" onclick="setCurTime6_1(4.1)">4.1s</a></td>
                 <td><b>In Planning Module and Prediction Module:</b><br>Wrong identification of drivable area, caused by wrong trajectory prediction<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
                 <td><b>For NPC 4: </b><br>Wrong trajectory prediction</td>
               </tr>
-              <tr class="danger"><td><a href="#" onclick="setCurTime6_1(5.0)">5s</a></td>
+              <tr class="active"><td><a href="#" onclick="setCurTime6_1(5.0)">5s</a></td>
                 <td><b>Accident!</b></td>
                 <td></td>
               </tr>
