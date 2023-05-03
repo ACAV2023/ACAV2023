@@ -52,7 +52,7 @@
 
       <div class="row">
         <div class="col-md-6 portfolio-item">
-          <h3>Merging Accident 1</a></h3>
+          <h3>Merging Accident 1</h3>
           <h4><a href="video/Merging_1_reduced.mp4">Reduced Recording.</a></h4>
           <video id="Merging-1r" width="560" height="267" controls muted>
             <source src="video/Merging_1_reduced.mp4" type="video/mp4">
@@ -82,29 +82,29 @@
         </div>
 
         <div class="col-md-6 portfolio-item">
-          <h3>Causality Analysis by ACAV</a></h3>
+          <h3>Causality Analysis by ACAV</h3>
           <table class="table table-hover">
             <thead>
-              <tr><th>Time</th><th>EV's Causal Events</th><th>Obs states</th></tr>
+              <tr><th>Time</th><th>Accident Causal Events</th><th>Details</th></tr>
             </thead>
             <tbody>
               <tr><td><a href="#" onclick="setCurTime3_1(0)">0s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
                 <td>--</td>
               </tr>
-              <tr class="danger"><td><a href="#" onclick="setCurTime3_1(0.4)">0.4s</a></td>
-                <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
-                <td>--</td>
+              <tr><td><a href="#" onclick="setCurTime3_1(0.4)">0.4s</a></td>
+                <td><b style="color: red;">In Planning Module (primary):</b><br>Wrong speed planning, although identifying drivable area correctly<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
+                <td>Planning speed is too fast or too slow</td>
               </tr>
-              <tr class="warning"><td><a href="#" onclick="setCurTime3_1(0.8)">0.8s</a></td>
-                <td><b>In Planning Module and Prediction Module:</b><br>Wrong identification of drivable area, caused by wrong trajectory prediction<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
-                <td><b>For NPC 2: </b><br>Wrong priority/trajectory prediction <br>Improper "none" decision <br><b>For NPC 4: </b><br>Improper "overtake" decision </td>
+              <tr><td><a href="#" onclick="setCurTime3_1(0.8)">0.8s</a></td>
+                <td><b>In Planning Module and Prediction Module:</b><br>Wrong identification of drivable area, caused by wrong trajectory prediction<br><b style="color: red;">In Control Module:</b><br> EV is skidding sometimes</td>
+                <td><b>For NPC 2: </b><br>Wrong priority/trajectory prediction <br>Improper "none" decision <br><b>For NPC 4: </b><br>Improper "overtake" decision <br> Planning speed is too fast or too slow</td>
               </tr>
-              <tr class="warning"><td><a href="#" onclick="setCurTime3_1(2.6)">2.6s</a></td>
-                <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
-                <td><b>For NPC 2: </b><br>Wrong priority prediction<br>Wrong trajectory prediction <br>Improper "none" decision </td>
+              <tr><td><a href="#" onclick="setCurTime3_1(2.6)">2.6s</a></td>
+                <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly<br><b style="color: red;">In Control Module:</b><br> EV is skidding sometimes</td>
+                <td><b>For NPC 2: </b><br>Wrong priority prediction<br>Wrong trajectory prediction <br>Improper "none" decision <br> Planning speed is too fast or too slow</td>
               </tr>
-              <tr class="active"><td><a href="#" onclick="setCurTime3_1(4.3)">4.3s</a></td>
+              <tr class="danger"><td><a href="#" onclick="setCurTime3_1(4.3)">4.3s</a></td>
                 <td><b>Accident!</b></td>
                 <td></td>
               </tr>

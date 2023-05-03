@@ -52,7 +52,7 @@
 
       <div class="row">
         <div class="col-md-6 portfolio-item">
-          <h3>Tailgating Accident 1</a></h3>
+          <h3>Tailgating Accident 1</h3>
           <h4><a href="video/Tailgating_1_reduced.mp4">Reduced Recording.</a></h4>
           <video id="Tailgating_1r" width="560" height="267" controls muted>
             <source src="video/Tailgating_1_reduced.mp4" type="video/mp4">
@@ -82,33 +82,33 @@
         </div>
 
         <div class="col-md-6 portfolio-item">
-          <h3>Causality Analysis by ACAV</a></h3>
+          <h3>Causality Analysis by ACAV</h3>
           <table class="table table-hover">
             <thead>
-              <tr><th>Time</th><th>EV's Causal Events</th><th>Obs states</th></tr>
+              <tr><th>Time</th><th>Accident Causal Events</th><th>Details</th></tr>
             </thead>
             <tbody>
               <tr><td><a href="#" onclick="setCurTime5_1(0)">0s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
                 <td>--</td>
               </tr>
-              <tr class="warning"><td><a href="#" onclick="setCurTime5_1(0.7)">0.7s</a></td>
-                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
-                <td><b>For NPC 2: </b><br>Wrong trajectory prediction</td>
+              <tr><td><a href="#" onclick="setCurTime5_1(0.7)">0.7s</a></td>
+                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b style="color: red;">In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>For NPC 2: </b><br>Wrong trajectory prediction <br> Planning speed is too fast or too slow</td>
               </tr>
-              <tr class="danger"><td><a href="#" onclick="setCurTime5_1(1.6)">1.6s</a></td>
-                <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
-                <td><b>For NPC 2: </b><br>Wrong priority/trajectory prediction</td>
+              <tr><td><a href="#" onclick="setCurTime5_1(1.6)">1.6s</a></td>
+                <td><b style="color: red;">In Planning Module (primary):</b><br>Wrong speed planning, although identifying drivable area correctly <br><b style="color: red;">In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>For NPC 2: </b><br>Wrong priority/trajectory prediction <br> Planning speed is too fast or too slow</td>
               </tr>
               <tr><td><a href="#" onclick="setCurTime5_1(2.0)">2.0s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
                 <td><b>For NPC 2: </b><br>Wrong priority/trajectory prediction</td>
               </tr>
-              <tr class="warning"><td><a href="#" onclick="setCurTime5_1(2.7)">2.7s</a></td>
-                <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
-                <td>--</td>
+              <tr><td><a href="#" onclick="setCurTime5_1(2.7)">2.7s</a></td>
+                <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly <br><b style="color: red;">In Control Module:</b><br>EV is skidding sometimes </td>
+                <td>Planning speed is too fast or too slow</td>
               </tr>
-              <tr class="active"><td><a href="#" onclick="setCurTime5_1(3.6)">3.6s</a></td>
+              <tr class="danger"><td><a href="#" onclick="setCurTime5_1(3.6)">3.6s</a></td>
                 <td><b>Accident!</b></td>
                 <td></td>
               </tr>
@@ -116,7 +116,7 @@
           </table>
           <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime5_2(28)">28s</a> 
             and ends at <a href="#" onclick="setCurTime5_2(31.3)">31.3s</a> in the original recording.<br>
-            <a href="report/Tailgating_1_report.txt">Check the original report.</a>
+            <a href="report/Tailgating-1_report.txt">Check the original report.</a>
           </p>
         </div>
       </div>

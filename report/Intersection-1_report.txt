@@ -3,23 +3,26 @@ Frame #0-32:
 
 Frame #33-36: 
     In <Planning> Module: EV reuses the previous planning, which sometimes could be improper
+        Improper speed planning, too fast or too slow
 
 Frame #37-72: 
-      ** Safety-critical <control> events! **
+      ** Critical <control> events! **
     No <Planning> Faults Discovered: Collision-free long-term speed planning
         For NPC "3": Wrong trajectory prediction
         For NPC "3": Improper "follow" decision
             Unsafe, EV is approaching the NPC now
+        Improper speed planning, too fast or too slow
     In <Control> Module: EV is skidding sometimes
 
 Frame #73-77: 
-      ** Safety-critical <planning> events!**
-      ** Safety-critical <control> events! **
+      ** Critical <planning> events!**
+      ** Critical <control> events! **
     In <Planning> Module: Wrong speed planning, although identifying drivable area correctly
         For NPC "3": Wrong priority prediction
         For NPC "3": Wrong trajectory prediction
         For NPC "3": Improper "none" decision
             Unsafe, EV is approaching the NPC now
+        Improper speed planning, too fast or too slow
     In <Control> Module: EV is skidding sometimes
 
 Frame #78:
