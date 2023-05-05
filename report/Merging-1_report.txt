@@ -12,8 +12,6 @@ Frame #10-29:
     In <Planning> Module and <Prediction> Module: Wrong identification of drivable area, caused by wrong trajectory prediction
         For NPC "2": Wrong priority prediction
         For NPC "2": Wrong trajectory prediction
-        For NPC "2": Improper "none" decision
-            Unsafe, EV is approaching the NPC now
         For NPC "4": Improper "overtake" decision
             Illegal and unsafe, EV is on the junction now
         Improper speed planning, too fast or too slow
@@ -22,10 +20,6 @@ Frame #10-29:
 Frame #30-52: 
       ** Critical <control> events! **
     In <Planning> Module: Wrong speed planning, although identifying drivable area correctly
-        For NPC "2": Wrong priority prediction
-        For NPC "2": Wrong trajectory prediction
-        For NPC "2": Improper "none" decision
-            Unsafe, EV is approaching the NPC now
         Improper speed planning, too fast or too slow
     In <Control> Module: EV is skidding sometimes
 

@@ -20,8 +20,6 @@ Frame #73-77:
     In <Planning> Module: Wrong speed planning, although identifying drivable area correctly
         For NPC "3": Wrong priority prediction
         For NPC "3": Wrong trajectory prediction
-        For NPC "3": Improper "none" decision
-            Unsafe, EV is approaching the NPC now
         Improper speed planning, too fast or too slow
     In <Control> Module: EV is skidding sometimes
 

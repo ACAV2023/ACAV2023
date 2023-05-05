@@ -12,15 +12,12 @@ Frame #16-20:
       ** Critical <planning> events!**
       ** Critical <control> events! **
     In <Planning> Module: Wrong speed planning, although identifying drivable area correctly
-        For NPC "2": Wrong priority prediction
         For NPC "2": Wrong trajectory prediction
         Improper speed planning, too fast or too slow
     In <Control> Module: EV is skidding sometimes
 
 Frame #21-29: 
     No <Planning> Faults Discovered: EV keeps safe distance from NPCs, or EV has almost stopped
-        For NPC "2": Wrong priority prediction
-        For NPC "2": Wrong trajectory prediction
 
 Frame #30-40: 
       ** Critical <control> events! **
