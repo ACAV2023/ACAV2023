@@ -89,7 +89,7 @@
             </thead>
             <tbody>
               <tr><td><a href="#" onclick="setCurTime6_1(0.1)">0s</a></td>
-                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b style="color: red;">In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
                 <td>AV's Planning speed is too fast or too slow<br><b>For NPC 4: </b><br>Wrong trajectory prediction<br>Improper "follow" decision (too close) </td>
               </tr>
               <tr><td><a href="#" onclick="setCurTime6_1(2.6)">2.6s</a></td>
@@ -97,14 +97,14 @@
                 <td>--</td>
               </tr>
               <tr><td><a href="#" onclick="setCurTime6_1(3)">3s</a></td>
-                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b style="color: red;">In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
                 <td><b>For NPC 4: </b><br>Wrong trajectory prediction<br>Improper "follow" decision (too close)</td>
               </tr>
               <tr><td><a href="#" onclick="setCurTime6_1(4.1)">4.1s</a></td>
-                <td><b  style="color: red;">In Planning Module and Prediction Module (primary):</b><br>Wrong identification of drivable area, caused by wrong trajectory prediction<br><b style="color: red;">In Control Module:</b><br> EV is skidding sometimes</td>
+                <td><b>In Planning Module and Prediction Module:</b><br>Wrong identification of drivable area, caused by wrong trajectory prediction<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
                 <td>AV's Planning speed is too fast or too slow<br><b>For NPC 4: </b><br>Wrong trajectory prediction</td>
               </tr>
-              <tr class="danger"><td><a href="#" onclick="setCurTime6_1(5.0)">5s</a></td>
+              <tr><td><a href="#" onclick="setCurTime6_1(5.0)">5s</a></td>
                 <td><b>Accident!</b></td>
                 <td></td>
               </tr>
@@ -112,6 +112,8 @@
           </table>
           <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime6_2(46.1)">46.1s</a> 
             and ends at <a href="#" onclick="setCurTime6_2(51)">51s</a> in the original recording.<br>
+            <b>Fault INFO: </b><br>
+            Please check @model LANE_SEQUENCE_PREDICTOR of Prediction Module<br>
             <a href="report/Tailgating-2_report.txt">Check the original report.</a>
           </p>
         </div>

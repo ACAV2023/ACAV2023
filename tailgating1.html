@@ -93,11 +93,11 @@
                 <td>--</td>
               </tr>
               <tr><td><a href="#" onclick="setCurTime5_1(0.7)">0.7s</a></td>
-                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b style="color: red;">In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
                 <td>AV's Planning speed is too fast or too slow<br><b>For NPC 2: </b><br>Wrong trajectory prediction</td>
               </tr>
               <tr><td><a href="#" onclick="setCurTime5_1(1.6)">1.6s</a></td>
-                <td><b style="color: red;">In Planning Module (primary):</b><br>Wrong speed planning, although identifying drivable area correctly <br><b style="color: red;">In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>In Planning Module:</b><br>Wrong motion planning, although identifying drivable area correctly <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
                 <td>AV's Planning speed is too fast or too slow<br><b>For NPC 2: </b><br>Wrong trajectory prediction</td>
               </tr>
               <tr><td><a href="#" onclick="setCurTime5_1(2.0)">2.0s</a></td>
@@ -105,10 +105,10 @@
                 <td>--</td>
               </tr>
               <tr><td><a href="#" onclick="setCurTime5_1(2.7)">2.7s</a></td>
-                <td><b>In Planning Module:</b><br>Wrong speed planning, although identifying drivable area correctly <br><b style="color: red;">In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>In Planning Module:</b><br>Wrong motion planning, although identifying drivable area correctly <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
                 <td>AV's Planning speed is too fast or too slow</td>
               </tr>
-              <tr class="danger"><td><a href="#" onclick="setCurTime5_1(3.6)">3.6s</a></td>
+              <tr><td><a href="#" onclick="setCurTime5_1(3.6)">3.6s</a></td>
                 <td><b>Accident!</b></td>
                 <td></td>
               </tr>
@@ -116,6 +116,8 @@
           </table>
           <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime5_2(28)">28s</a> 
             and ends at <a href="#" onclick="setCurTime5_2(31.3)">31.3s</a> in the original recording.<br>
+            <b>Fault INFO: </b><br>
+            Please check @func GetSpeedLimits() in speed_limit_decider.cc or @func DEFINE_double() in planning_gflags.cc of Planning Module <br>
             <a href="report/Tailgating-1_report.txt">Check the original report.</a>
           </p>
         </div>

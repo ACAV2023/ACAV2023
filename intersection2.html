@@ -93,7 +93,7 @@
                 <td>--</td>
               </tr>
               <tr><td><a href="#" onclick="setCurTime2_1(0.9)">0.9s</a></td>
-                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning<br><b style="color: red;">In Control Module:</b><br> EV is skidding sometimes</td>
+                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
                 <td>AV's Planning speed is too fast or too slow</td>
               </tr>
               <tr><td><a href="#" onclick="setCurTime2_1(2.3)">2.3s</a></td>
@@ -101,10 +101,10 @@
                 <td>AV's Planning speed is too fast or too slow</td>
               </tr>
               <tr><td><a href="#" onclick="setCurTime2_1(3.3)">3.3s</a></td>
-                <td><b style="color: red;">In Planning Module (primary):</b><br>Wrong speed planning, although identifying drivable area correctly<br><b style="color: red;">In Control Module:</b><br> EV is skidding sometimes</td>
+                <td><b>In Planning Module:</b><br>Wrong motion planning, although identifying drivable area correctly<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
                 <td>AV's Planning speed is too fast or too slow</td>
               </tr>
-              <tr class="danger"><td><a href="#" onclick="setCurTime2_1(4.3)">4.3s</a></td>
+              <tr><td><a href="#" onclick="setCurTime2_1(4.3)">4.3s</a></td>
                 <td><b>Accident!</b></td>
                 <td></td>
               </tr>
@@ -112,6 +112,7 @@
           </table>
           <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime2_2(8.15)">8.2s</a> 
             and ends at <a href="#" onclick="setCurTime2_2(12)">12s</a> in the original recording.<br>
+            <b>Fault INFO: </b><br> Please check @func GetSpeedLimits() in speed_limit_decider.cc or @func DEFINE_double() in planning_gflags.cc of Planning Module <br>
             <a href="report/Intersection-2_report.txt">Check the original report.</a>
           </p>
         </div>

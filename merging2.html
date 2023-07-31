@@ -97,14 +97,14 @@
                 <td>AV's Planning speed is too fast or too slow<br><b>For NPC 2: </b><br>Wrong trajectory prediction</td>
               </tr>
               <tr><td><a href="#" onclick="setCurTime4_1(1.7)">1.7s</a></td>
-                <td><b style="color: red;">In Planning Module (primary):</b><br>Wrong speed planning, although identifying drivable area correctly<br><b style="color: red;">In Control Module:</b><br> EV is skidding sometimes</td>
+                <td><b>In Planning Module:</b><br>Wrong motion planning, although identifying drivable area correctly<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
                 <td>AV's Planning speed is too fast or too slow<br><b>For NPC 2: </b><br>Wrong trajectory prediction</td>
               </tr>
               <tr><td><a href="#" onclick="setCurTime4_1(2.9)">2.9s</a></td>
-                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b style="color: red;">In Control Module:</b><br>EV is skidding sometimes </td>
+                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
                 <td>AV's Planning speed is too fast or too slow<br><b>For NPC 2: </b><br>Wrong priority/trajectory prediction</td>
               </tr>
-              <tr class="danger"><td><a href="#" onclick="setCurTime4_1(5.0)">5s</a></td>
+              <tr><td><a href="#" onclick="setCurTime4_1(5.0)">5s</a></td>
                 <td><b>Accident!</b></td>
                 <td></td>
               </tr>
@@ -112,6 +112,8 @@
           </table>
           <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime4_2(10.9)">10.9s</a> 
             and ends at <a href="#" onclick="setCurTime4_2(15.7)">15.7s</a> in the original recording.<br>
+            <b>Fault INFO: </b><br>
+            Please check @func GetSpeedLimits() in speed_limit_decider.cc or @func DEFINE_double() in planning_gflags.cc of Planning Module <br>
             <a href="report/Merging-2_report.txt">Check the original report.</a>
           </p>
         </div>
