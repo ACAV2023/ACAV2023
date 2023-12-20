@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ACAV2023</title>
+    <title>ACAV</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -26,16 +26,21 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://acav2023.github.io">ACAV2023</a>
+          <a class="navbar-brand" href="http://acav2023.github.io">ACAV</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Demo</a></li>
-            <!--<li><a href="threats2validity.html">Threats to Validity</a></li>-->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="intersection1.html">Video Demos</a></li>
             <li><a href="sourcecode.html">Source Code & Supplementary Materials</a></li>
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+						<li>
+							 <a href="https://as3r-lab.com/">AS3R Lab</a>
+						</li>
+					</ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav>
@@ -45,95 +50,51 @@
       <div class="row">
 
         <div class="col-lg-12">
-          <h1 class="page-header">ACAV <small>Demo</small></h1>
-        </div>
+          <h1 class="page-header">ACAV: A Framework for Automatic Causality Analysis in Autonomous Vehicle Accident Recordings</h1>
 
-      </div>
-
-      <div class="row">
-        <div class="col-md-6 portfolio-item">
-          <h3>Intersection Accident 1</h3>
-          <h4><a href="video/Intersection_1_reduced.mp4">Reduced Recording.</a></h4>
-          <video id="Intersection-1r" width="560" height="267" controls muted>
-            <source src="video/Intersection_1_reduced.mp4" type="video/mp4">
-          </video>
-          <script>
-            var vid1r = document.getElementById("Intersection-1r");
-            function getCurTime1_1() { 
-              alert(vid1r.currentTime);
-            } 
-            function setCurTime1_1(time) {              
-              vid1r.currentTime=time;
-            } 
-          </script> 
-          <h4><a href="video/Intersection_1.mp4">Original Recording.</a></h4>
-          <video id="Intersection-1" width="560" height="267" controls muted>
-            <source src="video/Intersection_1.mp4" type="video/mp4">
-          </video>
-          <script>
-            var vid1 = document.getElementById("Intersection-1");
-            function getCurTime1_2() { 
-              alert(vid1.currentTime);
-            } 
-            function setCurTime1_2(time) {              
-              vid1.currentTime=time;
-            } 
-          </script> 
-        </div>
-
-        <div class="col-md-6 portfolio-item">
-          <h3>Causality Analysis by ACAV</h3>
-          <table class="table table-hover">
-            <thead>
-              <tr><th>Time</th><th>Accident Causal Events</th><th>Details</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><a href="#" onclick="setCurTime1_1(0)">0s</a></td>
-                <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
-                <td>--</td>
-              </tr>
-              <tr><td><a href="#" onclick="setCurTime1_1(2.6)">2.6s</a></td>
-                <td><b>In Planning Module:</b><br>EV reuses the previous planning, which sometimes could be improper </td>
-                <td>AV's planning speed is too fast or too slow</td>
-              </tr>
-              <tr><td><a href="#" onclick="setCurTime1_1(2.9)">2.9s</a></td>
-                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
-                <td>AV's Planning speed is too fast or too slow<br><b>For NPC 3: </b><br>Wrong trajectory prediction <br>Improper "follow" decision (too close)</td>
-              </tr>
-              <tr><td><a href="#" onclick="setCurTime1_1(5.7)">5.7s</a></td>
-                <td><b>In Planning Module:</b><br>Wrong motion planning, although identifying drivable area correctly <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
-                <td>AV's Planning speed is too fast or too slow<br><b>For NPC 3: </b><br>Wrong priority/trajectory prediction</td>
-              </tr>
-              <tr><td><a href="#" onclick="setCurTime1_1(6.2)">6.2s</a></td>
-                <td><b>Accident!</b></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-          <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime1_2(7.8)">7.8s</a> 
-            and ends at <a href="#" onclick="setCurTime1_2(14)">14s</a> in the original recording.<br>
-            <b>Fault INFO: </b><br> Please check @func GetSpeedLimits() in speed_limit_decider.cc or @func DEFINE_double() in planning_gflags.cc of Planning Module <br>
-            <a href="report/Intersection-1_report.txt">Check the original report.</a>
+          <h2> Abstract </h2>
+          <p>
+            The rapid progress of autonomous vehicles (AVs) has brought the prospect of a driverless future closer than ever. 
+            Recent fatalities, however, have emphasized the importance of safety validation through large-scale testing. 
+            Multiple approaches achieve this fully automatically using high-fidelity simulators, i.e., by generating diverse driving scenarios and evaluating autonomous driving systems (ADSs) against different test oracles. 
+            While effective at finding violations, these approaches do not identify the decisions and actions that <i>caused</i> them — information that is critical for improving the safety of ADSs. 
           </p>
-        </div>
-      </div>
-    </div>
+          <p>
+            To address this challenge, we propose ACAV, an automated framework designed to conduct causality analysis for AV accident recordings in two stages. 
+            First, we apply feature extraction schemas based on the messages exchanged between ADS modules, and use a weighted voting method to discard frames of the recording unrelated to the accident. Second, we use safety specifications to identify safety-critical frames and deduce causal events by applying CAT — our causal analysis tool — to a station-time graph. 
+            We evaluate ACAV on the Apollo ADS, finding that it can identify five distinct types of causal events in 93.64% of 110 accident recordings generated by an AV testing engine. We further evaluated ACAV on 1206 accident recordings collected from versions of Apollo injected with specific faults, finding that it can correctly identify causal events in 96.44% of the accidents triggered by prediction errors, and 85.73% of the accidents triggered by planning errors.
+          </p>
+          <p>
+            <img src="fig/The architecture of the framework.png" class="img-thumbnail" />
+          </p>
 
-      <hr>
+          <h2> Video Demos </h2>
+          <p>
+            Videos of six accidents involving the Apollo ADS, along with the complete accident reports generated by ACAV are all available in the <i>Video Demos</i> sections. <br>
+            <a class="btn" href="intersection1.html">View details »</a>
+          </p>
 
-      <div class="row text-center">
-        
-        <div class="col-lg-12">
-          <ul class="pagination">
-            <li><a href="index.html">&laquo;</a></li>
-            <li class="active"><a href="index.html">1</a></li>
-            <li><a href="intersection2.html">2</a></li>
-            <li><a href="merging1.html">3</a></li>
-            <li><a href="merging2.html">4</a></li>
-            <li><a href="tailgating1.html">5</a></li>
-            <li><a href="tailgating2.html">6</a></li>
-            <li><a href="intersection2.html">&raquo;</a></li>
-          </ul>        
+          <h2>
+            Research Paper
+          </h2>
+          <p>
+            <b>[<a href="index.html">ICSE 2024</a>] ACAV: A Framework for Automatic Causality Analysis in Autonomous Vehicle Accident Recordings </b> <br>
+            <i>Huijia Sun, Christopher M. Poskitt, Yang Sun, Jun Sun, Yuqi Chen</i> <br>
+            [<a href="#TODO">Paper</a>] [<a href="#TODO">Slides</a>] [<a href="https://github.com/acav2023/ACAV-SourceCode">Code</a>] <br>
+            BibTex for citation: <br>
+            <samp>
+              BibTex TODO
+            </samp>
+          </p>
+
+          <h2>
+            FAQ
+          </h2>
+          <p>
+            <h3>TODO</h3>
+            TODO
+          </p>
+
         </div>
 
       </div>

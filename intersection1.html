@@ -57,74 +57,72 @@
 
       <div class="row">
         <div class="col-md-6 portfolio-item">
-          <h3>Merging Accident 2</h3>
-          <h4><a href="video/Merging_2_reduced.mp4">Reduced Recording.</a></h4>
-          <video id="Merging-2r" width="560" height="267" controls muted>
-            <source src="video/Merging_2_reduced.mp4" type="video/mp4">
+          <h3>Intersection Accident 1</h3>
+          <h4><a href="video/Intersection_1_reduced.mp4">Reduced Recording.</a></h4>
+          <video id="Intersection-1r" width="560" height="267" controls muted>
+            <source src="video/Intersection_1_reduced.mp4" type="video/mp4">
           </video>
           <script>
-            var vid4r = document.getElementById("Merging-2r");
-            function getCurTime4_1() { 
-              alert(vid4r.currentTime);
+            var vid1r = document.getElementById("Intersection-1r");
+            function getCurTime1_1() { 
+              alert(vid1r.currentTime);
             } 
-            function setCurTime4_1(time) {              
-              vid4r.currentTime=time;
+            function setCurTime1_1(time) {              
+              vid1r.currentTime=time;
             } 
           </script> 
-          <h4><a href="video/Merging_2.mp4">Original Recording.</a></h4>
-          <video id="Merging-2" width="560" height="267" controls muted>
-            <source src="video/Merging_2.mp4" type="video/mp4">
+          <h4><a href="video/Intersection_1.mp4">Original Recording.</a></h4>
+          <video id="Intersection-1" width="560" height="267" controls muted>
+            <source src="video/Intersection_1.mp4" type="video/mp4">
           </video>
           <script>
-            var vid4 = document.getElementById("Merging-2");
-            function getCurTime4_2() { 
-              alert(vid4.currentTime);
+            var vid1 = document.getElementById("Intersection-1");
+            function getCurTime1_2() { 
+              alert(vid1.currentTime);
             } 
-            function setCurTime4_2(time) {              
-              vid4.currentTime=time;
+            function setCurTime1_2(time) {              
+              vid1.currentTime=time;
             } 
           </script> 
         </div>
 
         <div class="col-md-6 portfolio-item">
-        <h3>Causality Analysis by ACAV</h3>
+          <h3>Causality Analysis by ACAV</h3>
           <table class="table table-hover">
             <thead>
               <tr><th>Time</th><th>Accident Causal Events</th><th>Details</th></tr>
             </thead>
             <tbody>
-              <tr><td><a href="#" onclick="setCurTime4_1(0)">0s</a></td>
+              <tr><td><a href="#" onclick="setCurTime1_1(0)">0s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>EV keeps safe distance from NPCs</td>
                 <td>--</td>
               </tr>
-              <tr><td><a href="#" onclick="setCurTime4_1(0.3)">0.3s</a></td>
+              <tr><td><a href="#" onclick="setCurTime1_1(2.6)">2.6s</a></td>
+                <td><b>In Planning Module:</b><br>EV reuses the previous planning, which sometimes could be improper </td>
+                <td>AV's planning speed is too fast or too slow</td>
+              </tr>
+              <tr><td><a href="#" onclick="setCurTime1_1(2.9)">2.9s</a></td>
                 <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
-                <td>AV's Planning speed is too fast or too slow<br><b>For NPC 2: </b><br>Wrong trajectory prediction</td>
+                <td>AV's Planning speed is too fast or too slow<br><b>For NPC 3: </b><br>Wrong trajectory prediction <br>Improper "follow" decision (too close)</td>
               </tr>
-              <tr><td><a href="#" onclick="setCurTime4_1(1.7)">1.7s</a></td>
-                <td><b>In Planning Module:</b><br>Wrong motion planning, although identifying drivable area correctly<br><b>In Control Module:</b><br> EV is skidding sometimes</td>
-                <td>AV's Planning speed is too fast or too slow<br><b>For NPC 2: </b><br>Wrong trajectory prediction</td>
+              <tr><td><a href="#" onclick="setCurTime1_1(5.7)">5.7s</a></td>
+                <td><b>In Planning Module:</b><br>Wrong motion planning, although identifying drivable area correctly <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
+                <td>AV's Planning speed is too fast or too slow<br><b>For NPC 3: </b><br>Wrong priority/trajectory prediction</td>
               </tr>
-              <tr><td><a href="#" onclick="setCurTime4_1(2.9)">2.9s</a></td>
-                <td><b>No Planning Faults Discovered:</b><br>Collision-free long-term speed planning <br><b>In Control Module:</b><br>EV is skidding sometimes </td>
-                <td>AV's Planning speed is too fast or too slow<br><b>For NPC 2: </b><br>Wrong priority/trajectory prediction</td>
-              </tr>
-              <tr><td><a href="#" onclick="setCurTime4_1(5.0)">5s</a></td>
+              <tr><td><a href="#" onclick="setCurTime1_1(6.2)">6.2s</a></td>
                 <td><b>Accident!</b></td>
                 <td></td>
               </tr>
             </tbody>
           </table>
-          <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime4_2(10.9)">10.9s</a> 
-            and ends at <a href="#" onclick="setCurTime4_2(15.7)">15.7s</a> in the original recording.<br>
-            <b>Fault INFO: </b><br>
-            Please check @func GetSpeedLimits() in speed_limit_decider.cc or @func DEFINE_double() in planning_gflags.cc of Planning Module <br>
-            <a href="report/Merging-2_report.txt">Check the original report.</a>
+          <p>The reduced recording by ACAV starts at about <a href="#" onclick="setCurTime1_2(7.8)">7.8s</a> 
+            and ends at <a href="#" onclick="setCurTime1_2(14)">14s</a> in the original recording.<br>
+            <b>Fault INFO: </b><br> Please check @func GetSpeedLimits() in speed_limit_decider.cc or @func DEFINE_double() in planning_gflags.cc of Planning Module <br>
+            <a href="report/Intersection-1_report.txt">Check the original report.</a>
           </p>
         </div>
       </div>
-
-      </div>
+    </div>
 
       <hr>
 
@@ -132,14 +130,14 @@
         
         <div class="col-lg-12">
           <ul class="pagination">
-            <li><a href="merging1.html">&laquo;</a></li>
-            <li><a href="intersection1.html">1</a></li>
+            <li><a href="intersection1.html">&laquo;</a></li>
+            <li class="active"><a href="intersection1.html">1</a></li>
             <li><a href="intersection2.html">2</a></li>
             <li><a href="merging1.html">3</a></li>
-            <li class="active"><a href="merging2.html">4</a></li>
+            <li><a href="merging2.html">4</a></li>
             <li><a href="tailgating1.html">5</a></li>
             <li><a href="tailgating2.html">6</a></li>
-            <li><a href="tailgating1.html">&raquo;</a></li>
+            <li><a href="intersection2.html">&raquo;</a></li>
           </ul>        
         </div>
 
