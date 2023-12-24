@@ -12,8 +12,6 @@ Frame #19-33:
         For NPC "2": Wrong trajectory prediction
         Improper speed planning, too fast or too slow
     In <Control> Module: EV is skidding sometimes
-    ** Fault Info **
-        Please check @func GetSpeedLimits() in speed_limit_decider.cc or , @func DEFINE_double() in planning_gflags.cc of Planning Module
 
 Frame #34-59: 
     No <Planning> Faults Discovered: Collision-free long-term speed planning

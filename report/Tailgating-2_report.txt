@@ -21,8 +21,6 @@ Frame #50-60:
         For NPC "4": Wrong trajectory prediction
         Improper speed planning, too fast or too slow
     In <Control> Module: EV is skidding sometimes
-    ** Fault Info **
-        Please check @model ['LANE_SEQUENCE_PREDICTOR'] of Prediction Module
 
 Frame #61:
     Accident!
